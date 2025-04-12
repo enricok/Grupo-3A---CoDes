@@ -21,13 +21,37 @@ main {
     align-items: center;
 }
 
+h2 {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
 section{
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    border:  0.1rem solid black;
+    width: 50%;
 }
 
-img {
-    height: 1%;
+.logo {
+    width: 30%;
+    height: 80%;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    border-top: 0.1rem solid black;
+    justify-content: space-between;
+    align-items: center;
 }
