@@ -1,16 +1,17 @@
-header {
+header{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    border-bottom : 0.1rem solid #000000;
-    border-top: 0.1rem solid #000000;
+    border-bottom: 0.1rem solid black;
     margin: 1rem 0 2rem 0;
+    padding-bottom: 1rem;
 }
 
 h1 {
-    position: relative;
-    left: 33%;
-    font-size: 1.3rem;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 main {
@@ -27,35 +28,6 @@ section{
     justify-content: space-between;
 }
 
-.botao {
-    padding: 0.5rem;
-    width: 35%;
-}
-
-.border {
-    border: 0.07rem solid black;
-}
-
-.novoborder {
-    padding: 0.5rem;
-    border: 0.07rem solid black;
-    width: 85%;
-}
-
-.IR {
-    position: relative;
-    top: 2rem;
-    left: 0.4rem;
-}
-
-.mais {
-    position: relative;
-    left: 1rem;
-    bottom: 1rem;
-    border-radius: 2rem;
-}
-
-.logo {
-    position: relative;
-    left: 0rem;
+img {
+    height: 1%;
 }
