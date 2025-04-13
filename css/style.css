@@ -10,6 +10,7 @@ header{
 }
 
 h1 {
+    font-size: 150%;
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -28,12 +29,19 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     font-weight: bold;
+    font-size: 150%;
+}
+
+p {
+    padding-right: 2rem;
 }
 
 section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 1rem;
     border:  0.1rem solid black;
     width: 50%;
@@ -41,13 +49,13 @@ section{
 }
 
 .logo {
-    width: 30%;
-    height: 80%;
+    transform: scale(0.5); 
+    transform-origin: top left;
 }
 
 .icone {
-    width: 30%;
-    height: 80%;
+    transform: scale(0.5); 
+    transform-origin: top left;
 }
 
 nav {
