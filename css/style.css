@@ -15,10 +15,26 @@ h1 {
     transform: translateX(-50%);
 }
 
+section p, section ul {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+
 h3 {
     font-size: 120%;
-    position: absolute;
     padding-left: 1rem;
+    position: static; 
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 0 1rem; 
+    box-sizing: border-box;
 }
 
 main {
@@ -26,6 +42,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80%;
 }
 
 h2 {
@@ -36,20 +53,19 @@ h2 {
     font-size: 150%;
 }
 
-p {
-    width: 80%;
-}
-
-section{
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
-    border:  0.1rem solid black;
-    width: 50%;
+    border: 0.1rem solid black;
+    width: 30%; 
     margin-bottom: 10rem;
+    height: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -74,15 +90,31 @@ div {
     margin-bottom: 4rem;
 }
 
-footer {
+footer{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     border-top: 0.1rem solid black;
 }
 
+.setinha {
+    justify-content: flex-start;
+}
+
+.activity {
+    justify-content: center;
+}
+
 .b1 {
-    height: 80%;
-    width: 80%;
-    background-color: lightgreen;
+    margin-top: 1rem;
+    height: 10rem;
+    width: 100%;
+}
+
+input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-top: 0.5rem;
 }
