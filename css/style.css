@@ -17,7 +17,11 @@ h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+<<<<<<< HEAD
     color: #D96C9F;
+=======
+    color: #000000;
+>>>>>>> 35d38612f8f5e710b76371f0b7c290a36e3f644c
 }
 
 section p, section ul {
@@ -159,18 +163,23 @@ li{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 90%;
     max-width: 400px;
-    border: 1px solid black;
+    border: .0625rem solid black;
     padding: 1rem;
-    margin-bottom: 2rem;
+    max-width: 50rem;
     box-sizing: border-box;
 }
 
+
+.caixa:hover {
+    background-color:#F29F05; 
+}
+
+
 .imgresp {
-    width: 100px;
+    width: 3.125rem;
     height: auto;
-    margin-right: 1rem; 
+    margin-right: 0.5rem; 
 }
 
 nav {
