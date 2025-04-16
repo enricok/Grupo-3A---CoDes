@@ -6,6 +6,10 @@ header{
     border-bottom: 0.1rem solid black;
     margin: 1rem 0 2rem 0;
     padding-bottom: 1rem;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h1 {
@@ -13,6 +17,7 @@ h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    color: #F27405;
 }
 
 section p, section ul {
@@ -20,11 +25,19 @@ section p, section ul {
     padding: 0.5rem;
 }
 
+body{
+    background-color: #F1EACD;
+}
+
 
 h3 {
     font-size: 120%;
     padding-left: 1rem;
-    position: static; 
+    position: static;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 menu {
@@ -51,6 +64,10 @@ h2 {
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 150%;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 section {
@@ -65,6 +82,8 @@ section {
     padding: 1rem;
     margin-bottom: 2rem;
     box-sizing: border-box;
+    background-color:#DFEDF2 ;
+
   }
 
 .logo {
@@ -118,6 +137,21 @@ input {
 
 p {
     margin-top: 0.5rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+li{ 
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 .caixa {
