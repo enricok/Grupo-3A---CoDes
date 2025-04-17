@@ -74,7 +74,6 @@ menu {
 }
 
 main {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +81,6 @@ main {
 }
 
 h2 {
-    position:absolute;
     left: 50%;
     transform: translateX(-50%);
     font-weight: bold;
@@ -91,6 +89,15 @@ h2 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+.PsicoCenter{
+    border: solid;
+}
+
+.teste{
+    border: solid;
+    display: flex;
 }
 
 iframe {
@@ -107,6 +114,7 @@ a {
 }
 
 .titulo-lista{
+    position: absolute;
     color: white;
     position: absolute;
     margin-top: 57vh;
@@ -222,8 +230,6 @@ li{
     align-items: center;
     justify-content: flex-start;
     border: .0625rem solid black;
-    padding: 1rem;
-    max-width: 50rem;
 }
 
 
@@ -232,9 +238,8 @@ li{
 }
 
 
-.imgresp {
-    width: 100px;           
-    height: auto;
+.imgresp {        
+    height: 15vh;
     margin-right: 0.5rem;  
     padding: 0;            
 }
@@ -242,7 +247,6 @@ li{
 .imgnavfoot{
     width: 4.5rem;
     height: auto;
-    margin: 0.5rem;
 }
 
 footer {
