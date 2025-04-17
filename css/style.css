@@ -1,28 +1,39 @@
-header{
+
+header {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;    
+    align-items: center;        
+    padding: 5rem 1rem;
     border-bottom: 0.1rem solid black;
-    margin: 1rem 0 2rem 0;
-    padding-bottom: 1rem;
+    background-color: #F1EACD;
+    flex-wrap: wrap;     
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
+    font-style: normal;       
 }
 
-h1 {
-    font-size: 150%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-<<<<<<< HEAD
-    color: #D96C9F;
-=======
-    color: #000000;
->>>>>>> 35d38612f8f5e710b76371f0b7c290a36e3f644c
+.imgtitle {
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;         
+    margin-left: 1rem; 
+    margin-bottom: 0.6rem;                
+    transform: none;            
 }
+
+
+h1 {
+    font-size: 3rem;
+    position: static;           
+    margin: 0;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+
+
 
 section p, section ul {
     margin: 0;
@@ -48,10 +59,11 @@ menu {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-evenly;
     width: 100%; 
     padding: 0 1rem; 
-    box-sizing: border-box;
+
+    
 }
 
 main {
@@ -60,6 +72,7 @@ main {
     flex-direction: column;
     align-items: center;
     height: 80%;
+    margin-bottom: 20rem;
 }
 
 h2 {
@@ -87,8 +100,9 @@ section {
     margin-bottom: 2rem;
     box-sizing: border-box;
     background-color:#DFEDF2 ;
+    height: 30rem; 
 
-  }
+}
 
 .logo {
     transform: scale(0.2); 
@@ -103,7 +117,10 @@ section {
 .seta {
     transform: scale(0.3); 
     transform-origin: top left;
+    margin: 0;            
+    padding: 0;
 }
+
 
 div {
     margin-top: 4rem;
@@ -112,21 +129,15 @@ div {
     margin-bottom: 4rem;
 }
 
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    border-top: 0.1rem solid black;
-}
-
 .setinha {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;        
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0; 
 }
 
-.activity {
-    justify-content: center;
-}
 
 .b1 {
     margin-top: 1rem;
@@ -182,19 +193,32 @@ li{
     margin-right: 0.5rem; 
 }
 
+.imgnavfoot{
+    width: 4.5rem;
+    height: auto;
+    margin: 0.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.1rem solid black;
+    background-color: #F1EACD;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
-.imgnav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 25%;
-    height: auto;
-    margin: 0.1rem;
-    padding: 0.1rem;
-}
+
