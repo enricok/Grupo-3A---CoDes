@@ -33,7 +33,6 @@ h1 {
 }
 
 
-
 section p, section ul {
     margin: 0;
     padding: 0.5rem;
@@ -43,6 +42,15 @@ body{
     background-color: #F1EACD;
 }
 
+.julia {
+    position: absolute;
+    margin-top: 2vh;
+    right: 47.7vw;
+}
+
+.change {
+    margin-top: 2rem;
+}
 
 h3 {
     font-size: 120%;
@@ -62,7 +70,6 @@ menu {
     justify-content: center;
     width: 100%; 
     padding: 0 1rem; 
-
     
 }
 
@@ -71,8 +78,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80%;
-    margin-bottom: 20rem;
+    margin-bottom: 8rem;
 }
 
 h2 {
@@ -87,21 +93,44 @@ h2 {
     font-style: normal;
 }
 
+iframe {
+    width: 80vw;
+    height: 60vh;
+}
+
+a {
+    color: inherit;
+}
+
+.link-lista {
+    margin-bottom: 1rem;
+}
+
+.titulo-lista{
+    color: white;
+    position: absolute;
+    margin-top: 57vh;
+    padding: 0;
+    background-color: #D96C9F;
+    padding: 1rem;
+}
+
 section {
     display: flex;
     flex-direction: column;     
     align-items: center;        
     justify-content: center;   
-    width: 90%;
-    max-width: 300px;
-    min-width: 200px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 1rem;
     margin-bottom: 2rem;
     box-sizing: border-box;
     background-color:#DFEDF2 ;
     height: 10rem; 
+}
 
+.conteudo{
+    height: 20vh;
+    width: 20vh;
 }
 
 .logo {
@@ -127,6 +156,8 @@ div {
     flex-direction: column;
     margin-bottom: 4rem;
 }
+
+
 
 .help {
     margin-left: 5rem;
@@ -243,4 +274,3 @@ nav {
     margin: 1rem auto; 
     color: inherit;
 }
-
