@@ -52,7 +52,6 @@ body{
 
 .change {
     margin-top: 2rem;
-
 }
 
 .change:hover {
@@ -140,6 +139,29 @@ section {
     height: 10rem; 
 }
 
+div {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+}
+
+.caixa {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: .0625rem solid black;
+    padding: 1rem;
+    max-width: 50rem;
+}
+
+.caixa:hover {
+    background-color:#F29F05;
+}
+
 .conteudo{
     height: 30vh;
     width: 20vh;
@@ -160,14 +182,6 @@ section {
     transform-origin: top left;
     margin-left: 1rem;      
     padding: 0;
-}
-
-div {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 4rem;
-    margin-left: 1rem;
 }
 
 .input {
@@ -227,23 +241,6 @@ li{
     font-variation-settings:
       "wdth" 100;
 }
-
-.caixa {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    border: .0625rem solid black;
-    padding: 1rem;
-    max-width: 50rem;
-}
-
-
-.caixa:hover {
-    background-color:#F29F05;
-}
-
 
 .imgresp {
     width: 6.25rem;           
