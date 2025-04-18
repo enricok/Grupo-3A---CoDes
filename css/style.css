@@ -129,6 +129,9 @@ a {
 section {
     display: flex;
     flex-direction: column;     
+}
+
+.geral {
     align-items: center;        
     justify-content: center;   
     border: 0.125rem solid black;
@@ -139,10 +142,8 @@ section {
     height: 10rem; 
 }
 
-div {
+.div {
     margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 4rem;
     margin-left: 1rem;
 }
