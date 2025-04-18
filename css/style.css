@@ -7,7 +7,6 @@ header {
     background-color: #F1EACD;
     flex-wrap: wrap;     
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;       
 }
@@ -64,7 +63,6 @@ h3 {
     font-size: 120%;
     position: static;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
@@ -94,7 +92,6 @@ h2 {
     font-weight: bold;
     font-size: 150%;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
@@ -215,7 +212,6 @@ input {
 p {
     margin-top: 0.5rem;
     font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
@@ -226,7 +222,6 @@ p {
 
 li{ 
     font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-variation-settings:
