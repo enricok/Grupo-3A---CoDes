@@ -47,6 +47,7 @@ body{
 .julia {
     position: static;
     margin-top: 0vh;
+    padding-top: 0.4rem;
     bottom: -36vh;
 }
 
