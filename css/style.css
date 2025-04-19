@@ -48,6 +48,7 @@ body{
 .julia {
     position: static;
     margin-top: 0vh;
+    margin-left:2.5rem;
     padding-top: 0.4rem;
     bottom: -36vh;
 }
@@ -68,6 +69,7 @@ h3 {
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     font-style: normal;
+
 }
 
 menu {
@@ -145,6 +147,7 @@ section {
     box-sizing: border-box;
     background-color:#DFEDF2 ;
     height: 10rem; 
+    border-radius: 1rem;
 }
 
 .div {
@@ -162,10 +165,12 @@ section {
     border: .0625rem solid black;
     padding: 1rem;
     max-width: 50rem;
+    border-radius: 1rem;
 }
 
 .caixa:hover {
     background-color:#F29F05;
+    cursor: pointer;
 }
 
 .conteudo{
@@ -280,6 +285,9 @@ footer {
     background-color: #F1EACD;
 }
 
+
+
+
 footer nav {
     display: flex;
     justify-content: space-around;
@@ -312,7 +320,7 @@ nav {
     justify-content: space-between; 
     padding: 0 2rem; 
     box-sizing: border-box;
-  }
+}
   
 .setinha .nav-seta-canto .seta {
     transform: scale(0.3);
@@ -322,3 +330,17 @@ nav {
 }
 
 
+.caixa:active,
+.imgnavfoot:active  {
+    transform: scale(0.95);
+}
+
+.seta:active {
+    transform: scale(0.25); 
+}
+
+footer .change.geral {
+    max-width: 20rem;       
+    width: 90%;             
+    margin: 1rem auto;      
+}
