@@ -52,6 +52,15 @@ body{
     bottom: -36vh;
 }
 
+.meta {
+    width: 2vw;
+    height: 2vh;
+}
+
+.meta-text{
+    font-size: 0.5vw;
+}
+
 .change {
     margin-top: 2rem;
     justify-content: center;
