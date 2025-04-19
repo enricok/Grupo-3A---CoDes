@@ -1,7 +1,8 @@
 header {
     display: flex;
     justify-content: center;    
-    align-items: center;        
+    align-items: center;
+    width: 100vw;    
     padding: 5rem 1rem;
     border-bottom: 0.3rem solid #D96C9F;
     background-color: #F1EACD;
@@ -71,6 +72,7 @@ menu {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%; 
     padding: 0 1rem; 
     
@@ -180,7 +182,7 @@ section {
 
 .seta {
     transform: scale(0.3); 
-    transform-origin: top left;
+    transform-origin: center;
     margin-left: 1rem;      
     padding: 0;
 }
@@ -194,13 +196,17 @@ section {
 }
 
 .help2 {
-    margin-left: 25rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+
 }
 
 .setinha {
     display: flex;
     justify-content: space-between;
-    width: 100%;        
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
     margin: 0; 
@@ -244,7 +250,8 @@ li{
 }
 
 .imgresp {
-    width: 6.25rem;           
+    width: 6.25rem;   
+    max-width: 100%;        
     height: auto;
     margin-right: 0.5rem;  
     padding: 0;            
@@ -252,8 +259,11 @@ li{
 
 .imgnavfoot{
     width: 4.5rem;
+    max-width: 5rem;
     height: auto;
     margin: 0.5rem;
+    flex-shrink: 1;
+    
 }
 
 footer {
@@ -288,3 +298,21 @@ nav {
 .confirmar {
     bottom: 4.5vh;
 }
+
+
+.setinha .nav-seta-canto {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 2rem; 
+    box-sizing: border-box;
+  }
+  
+.setinha .nav-seta-canto .seta {
+    transform: scale(0.3);
+    transform-origin: center;
+    margin: 0;
+    padding: 0;
+}
+
+
