@@ -362,3 +362,10 @@ footer .change.geral {
     width: 90%;             
     margin: 1rem auto;      
 }
+
+.b2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
