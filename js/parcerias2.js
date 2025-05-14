@@ -1,4 +1,4 @@
-document = addEventListener("DOMContentLoaded", function(evento){ 
+document.addEventListener("DOMContentLoaded", function(evento){ 
 
     saveButton = document.createElement("button");
     saveButton.id = "saveButton";

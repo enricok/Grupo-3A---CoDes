@@ -1,4 +1,12 @@
-document = addEventListener("DOMContentLoaded", function(evento){ 
+document.addEventListener("DOMContentLoaded", function(evento){ 
+
+    section = document.querySelector (".div")
+
+    botao = section.querySelector("button")
+
+    botao.addEventListener ("click", function (evento) {
+        alert ("Confirmado!")
+    })
 
     p_descricao = document.querySelector (".descricao")
     p_data = document.querySelector (".data")
