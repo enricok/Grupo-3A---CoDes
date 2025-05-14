@@ -12,13 +12,11 @@ document = addEventListener("DOMContentLoaded", function(evento){
 
                 descricao = document.getElementById("descricao").value,
                 data = document.getElementById("data").value,
-                hora = document.getElementById("hora").value,
-                local = document.getElementById("local").value
+                duracao = document.getElementById("duracao").value,
 
-                localStorage.setItem("descricao", `${descricao}`);
-                localStorage.setItem("data", `${data}`);
-                localStorage.setItem("hora", `${hora}`);
-                localStorage.setItem("local", `${local}`);
+                localStorage.setItem("descricao_parce", `${descricao}`);
+                localStorage.setItem("data_parce", `${data}`);
+                localStorage.setItem("duracao_parce", `${duracao}`);
 
                 localStorage.setItem ("clickou_parce", "True")
                 

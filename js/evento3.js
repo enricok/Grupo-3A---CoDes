@@ -11,8 +11,8 @@ document = addEventListener("DOMContentLoaded", function(evento){
     local = localStorage.getItem('local')
 
     p_descricao.innerHTML = `Descrição: ${descricao}`
-    p_data.innerHTML = `Data: ${data}`
-    p_horario.innerHTML = `Horário: ${horario}`
+    p_data.innerHTML = `Data do evento: ${data}`
+    p_horario.innerHTML = `Horário agendado: ${horario}`
     p_local.innerHTML = `Local: ${local}`
 
 })

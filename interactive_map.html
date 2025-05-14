@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6c0cf40da02977c26c71e76b64ff6fa4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6c0cf40da02977c26c71e76b64ff6fa4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6c0cf40da02977c26c71e76b64ff6fa4 = L.map(
+                "map_6c0cf40da02977c26c71e76b64ff6fa4",
+                {
+                    center: [-23.5883, -46.6868],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3373685b4a58676e155c88168926c592 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3373685b4a58676e155c88168926c592.addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {"circle": false, "circlemarker": true, "marker": true, "polygon": false, "polyline": false, "rectangle": false},
+              edit: {"edit": false},
+            }
+                // FeatureGroup is to store editable layers.
+                var drawnItems_draw_control_5276912d7d77bd32f505ca0ebfa62fce =
+                    new L.featureGroup().addTo(
+                        map_6c0cf40da02977c26c71e76b64ff6fa4
+                    );
+
+            options.edit.featureGroup = drawnItems_draw_control_5276912d7d77bd32f505ca0ebfa62fce;
+            var draw_control_5276912d7d77bd32f505ca0ebfa62fce = new L.Control.Draw(
+                options
+            ).addTo( map_6c0cf40da02977c26c71e76b64ff6fa4 );
+            map_6c0cf40da02977c26c71e76b64ff6fa4.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_5276912d7d77bd32f505ca0ebfa62fce.addLayer(layer);
+            });
+            map_6c0cf40da02977c26c71e76b64ff6fa4.on('draw:created', function(e) {
+                drawnItems_draw_control_5276912d7d77bd32f505ca0ebfa62fce.addLayer(e.layer);
+            });
+
+            
+        
+    
+            var marker_d26a82f94e883a9295afd578e9b55402 = L.marker(
+                [-23.5883, -46.6868],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_ed8dd788f374755caa81c716d8e39026 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd25bbee94861d19a676bf86d0197ca1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3ae3443a691017fed00cfc8c8c1de2f = $(`<div id="html_a3ae3443a691017fed00cfc8c8c1de2f" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #e6f3ff; border-radius: 5px; border: 2px solid #007bff; font-family: Arial; overflow: hidden;">             <img src="img/Screenshot 2025-04-17 at 11.02.27.png" alt="PsicoCenter" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #007bff; margin: 0 0 5px;">PsicoCenter</h3>                 <p style="margin: 0; font-size: 12px;">Academia especializada em tratamentos de transtornos mentais com o uso da prática de esportes e outras atividades regenerativas.</p>             </div>         </div>         </div>`)[0];
+                popup_dd25bbee94861d19a676bf86d0197ca1.setContent(html_a3ae3443a691017fed00cfc8c8c1de2f);
+            
+        
+
+        marker_d26a82f94e883a9295afd578e9b55402.bindPopup(popup_dd25bbee94861d19a676bf86d0197ca1)
+        ;
+
+        
+    
+    
+                marker_d26a82f94e883a9295afd578e9b55402.setIcon(icon_ed8dd788f374755caa81c716d8e39026);
+            
+    
+            var marker_a5fe066c58b0998fae485bd1fa99818a = L.marker(
+                [-23.587, -46.684],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_efcf3363a61f0bc33c7ca0e56204c644 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6823c0c0d9082a2708181cffc9ffa922 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6a5e33fc8804fa8f9864f91776bd0111 = $(`<div id="html_6a5e33fc8804fa8f9864f91776bd0111" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #e6ffe6; border-radius: 5px; border: 2px solid #28a745; font-family: Arial; overflow: hidden;">             <img src="img/Screenshot 2025-04-17 at 11.02.41.png" alt="NovaClin & Citolab" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #28a745; margin: 0 0 5px;">NovaClin & Citolab</h3>                 <p style="margin: 0; font-size: 12px;">Clínica odontológica moderna e acolhedora, dedicada a proporcionar cuidados de excelência para a saúde bucal de toda a família.</p>             </div>         </div>         </div>`)[0];
+                popup_6823c0c0d9082a2708181cffc9ffa922.setContent(html_6a5e33fc8804fa8f9864f91776bd0111);
+            
+        
+
+        marker_a5fe066c58b0998fae485bd1fa99818a.bindPopup(popup_6823c0c0d9082a2708181cffc9ffa922)
+        ;
+
+        
+    
+    
+                marker_a5fe066c58b0998fae485bd1fa99818a.setIcon(icon_efcf3363a61f0bc33c7ca0e56204c644);
+            
+    
+            var marker_9def75258825cdb4d7e833957dd8ed49 = L.marker(
+                [-23.59, -46.688],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_88676a12a168686e9b8db0fc2aa3f236 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "paw",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_260f2b973d6feaaed6c7fe0a351eb1d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7c5ce37c09b7d4573e8db82ce3fb039b = $(`<div id="html_7c5ce37c09b7d4573e8db82ce3fb039b" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #f3e6ff; border-radius: 5px; border: 2px solid #6f42c1; font-family: Arial; overflow: hidden;">             <img src="img/Screenshot 2025-04-17 at 11.02.49.png" alt="Wellington Pet" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #6f42c1; margin: 0 0 5px;">Wellington Pet</h3>                 <p style="margin: 0; font-size: 12px;">Pet Shop com enfoque em produtos e serviços de qualidade para que seu companheiro de casa esteja o mais limpo e nutrido possível.</p>             </div>         </div>         </div>`)[0];
+                popup_260f2b973d6feaaed6c7fe0a351eb1d4.setContent(html_7c5ce37c09b7d4573e8db82ce3fb039b);
+            
+        
+
+        marker_9def75258825cdb4d7e833957dd8ed49.bindPopup(popup_260f2b973d6feaaed6c7fe0a351eb1d4)
+        ;
+
+        
+    
+    
+                marker_9def75258825cdb4d7e833957dd8ed49.setIcon(icon_88676a12a168686e9b8db0fc2aa3f236);
+            
+    
+            var marker_c436d4a6bae3a3a61ea6387da9660752 = L.marker(
+                [-23.589, -46.687],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_9a0ed0fc7d7570bde4726d757e7bedf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b32a648fca81844a1e8968724578e97c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38183b08b318942fc9e2df566860c939 = $(`<div id="html_38183b08b318942fc9e2df566860c939" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #e6ffe6; border-radius: 5px; border: 2px solid #28a745; font-family: Arial; overflow: hidden;">             <img src="img/itaim1.jpg" alt="Cia da Saúde" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #28a745; margin: 0 0 5px;">Cia da Saúde</h3>                 <p style="margin: 0; font-size: 12px;">Loja de produtos naturais com foco em bem-estar, oferecendo uma ampla variedade de itens para uma vida mais saudável e equilibrada.</p>             </div>         </div>         </div>`)[0];
+                popup_b32a648fca81844a1e8968724578e97c.setContent(html_38183b08b318942fc9e2df566860c939);
+            
+        
+
+        marker_c436d4a6bae3a3a61ea6387da9660752.bindPopup(popup_b32a648fca81844a1e8968724578e97c)
+        ;
+
+        
+    
+    
+                marker_c436d4a6bae3a3a61ea6387da9660752.setIcon(icon_9a0ed0fc7d7570bde4726d757e7bedf7);
+            
+    
+            var marker_d8b95b643f5a8008e1eb8de845ba6781 = L.marker(
+                [-23.588, -46.685],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_26009c4e333fe86f16c9931a3d2b810b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-bag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd34b134d36f7bedd8324ad8cb49b7e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89b8705d59f196661fdc04a1f7986b10 = $(`<div id="html_89b8705d59f196661fdc04a1f7986b10" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #ffe6e6; border-radius: 5px; border: 2px solid #dc3545; font-family: Arial; overflow: hidden;">             <img src="img/itaim2.jpeg" alt="Kitpack" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #dc3545; margin: 0 0 5px;">Kitpack</h3>                 <p style="margin: 0; font-size: 12px;">Loja de materiais de limpeza e descartáveis, dedicada a fornecer produtos práticos e de qualidade para o dia a dia.</p>             </div>         </div>         </div>`)[0];
+                popup_dd34b134d36f7bedd8324ad8cb49b7e5.setContent(html_89b8705d59f196661fdc04a1f7986b10);
+            
+        
+
+        marker_d8b95b643f5a8008e1eb8de845ba6781.bindPopup(popup_dd34b134d36f7bedd8324ad8cb49b7e5)
+        ;
+
+        
+    
+    
+                marker_d8b95b643f5a8008e1eb8de845ba6781.setIcon(icon_26009c4e333fe86f16c9931a3d2b810b);
+            
+    
+            var marker_9f27386b656fd14a4b61acd9a1ab73f0 = L.marker(
+                [-23.5865, -46.6865],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_2f24aedb12ace5479f197dba22dcee12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a44db98d5fb6ed08be8964f736cc0fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_71502a7d8033f57bc6119f28eae0a737 = $(`<div id="html_71502a7d8033f57bc6119f28eae0a737" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #e6f3ff; border-radius: 5px; border: 2px solid #007bff; font-family: Arial; overflow: hidden;">             <img src="img/itaim3.jpg" alt="Drogaria Nova Esperança" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #007bff; margin: 0 0 5px;">Drogaria Nova Esperança</h3>                 <p style="margin: 0; font-size: 12px;">Farmácia moderna que oferece medicamentos e produtos de saúde com atendimento acolhedor e de confiança.</p>             </div>         </div>         </div>`)[0];
+                popup_6a44db98d5fb6ed08be8964f736cc0fb.setContent(html_71502a7d8033f57bc6119f28eae0a737);
+            
+        
+
+        marker_9f27386b656fd14a4b61acd9a1ab73f0.bindPopup(popup_6a44db98d5fb6ed08be8964f736cc0fb)
+        ;
+
+        
+    
+    
+                marker_9f27386b656fd14a4b61acd9a1ab73f0.setIcon(icon_2f24aedb12ace5479f197dba22dcee12);
+            
+    
+            var marker_9babdddab1ef72c0f16a62cf5e66a5fd = L.marker(
+                [-23.5895, -46.6835],
+                {
+}
+            ).addTo(map_6c0cf40da02977c26c71e76b64ff6fa4);
+        
+    
+            var icon_bb8dbc2b2a5b06bf06f94cf2989e22a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "utensils",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8d09eccde70f5ab4f54300f4c2244f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b0c840b70ff27f0317842f58016f7eea = $(`<div id="html_b0c840b70ff27f0317842f58016f7eea" style="width: 100.0%; height: 100.0%;">         <div style="width: 250px; padding: 10px; background-color: #fff3cd; border-radius: 5px; border: 2px solid #ffc107; font-family: Arial; overflow: hidden;">             <img src="img/itaim4.jpeg" alt="Koa Food Market" style="width: 80px; height: auto; float: left; margin-right: 10px;">             <div style="margin-left: 90px;">                 <h3 style="color: #ffc107; margin: 0 0 5px;">Koa Food Market</h3>                 <p style="margin: 0; font-size: 12px;">Mercado de alimentos saudáveis e orgânicos, com opções frescas e sustentáveis para uma alimentação consciente.</p>             </div>         </div>         </div>`)[0];
+                popup_a8d09eccde70f5ab4f54300f4c2244f4.setContent(html_b0c840b70ff27f0317842f58016f7eea);
+            
+        
+
+        marker_9babdddab1ef72c0f16a62cf5e66a5fd.bindPopup(popup_a8d09eccde70f5ab4f54300f4c2244f4)
+        ;
+
+        
+    
+    
+                marker_9babdddab1ef72c0f16a62cf5e66a5fd.setIcon(icon_bb8dbc2b2a5b06bf06f94cf2989e22a2);
+            
+</script>
+</html>
