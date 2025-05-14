@@ -22,5 +22,30 @@ document.addEventListener("DOMContentLoaded", function(evento){
                 
                 alert("Conteúdo salvo com sucesso!");
     });
+
+    setadireitalink = document.querySelector('a[href="parcerias_select3.html"]');
+    if (setadireitalink) {
+        setadireitalink.addEventListener("click", function(event) {
+            descricao = document.getElementById("descricao").value;
+            data = document.getElementById("data").value;
+            duracao = document.getElementById("duracao").value;
+
+            if (descricao === "") {
+                alert("Preencha o campo de Descrição.");
+                event.preventDefault();
+            }
+
+            if (data === "") {
+                alert("Preencha o campo de Data.");
+                event.preventDefault();
+            }
+
+            if (duracao === "") {
+                alert("Preencha o campo de Duração.");
+                event.preventDefault();
+            }
+        });
+    }
+
+});
  
-})

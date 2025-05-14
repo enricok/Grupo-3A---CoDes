@@ -74,7 +74,13 @@ document.addEventListener("DOMContentLoaded", function(evento) {
                 title.style.zIndex = "1"; 
                 title.style.paddingBottom = "1rem"; 
                 
-                sidebar.appendChild(title);
+                imgJ = document.createElement("img");
+                imgJ.src = "img/letter-j.png";
+                imgJ.alt = "Letra J";
+                imgJ.style.width = "4rem";
+                imgJ.style.margin = "0 auto 2rem auto";
+                imgJ.style.display = "block";
+                sidebar.appendChild(imgJ);
 
                 navItem1 = document.createElement("a");
                 navItem1.href = "#";
