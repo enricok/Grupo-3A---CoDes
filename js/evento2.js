@@ -10,10 +10,10 @@ document = addEventListener("DOMContentLoaded", function(evento){
 
     saveButton.addEventListener("click", function(event) {
 
-                descricao = document.getElementById("descricao").value,
-                data = document.getElementById("data").value,
-                hora = document.getElementById("hora").value,
-                local = document.getElementById("local").value
+                descricao = document.getElementById("descricao").value;
+                data = document.getElementById("data").value;
+                hora = document.getElementById("hora").value;
+                local = document.getElementById("local").value;
 
                 localStorage.setItem("descricao", `${descricao}`);
                 localStorage.setItem("data", `${data}`);
