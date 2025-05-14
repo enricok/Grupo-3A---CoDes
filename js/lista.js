@@ -3,9 +3,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     sections = main.querySelectorAll(".caixa.geral");
     nav = main.querySelectorAll("nav");
     imgs = nav[0] ? nav[0].querySelectorAll("img") : [];
-
-    console.log(sections[0]);
-
    
     imgs[0].addEventListener("click", function(event) {
         if (imgs[0].style.border.includes ("0.5rem solid green")) {
