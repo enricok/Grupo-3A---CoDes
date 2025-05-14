@@ -2,7 +2,7 @@ document = addEventListener("DOMContentLoaded", function(evento){
 
     saveButton = document.createElement("button");
     saveButton.id = "saveButton";
-    saveButton.innerHTML = "Salvar Eventos";
+    saveButton.innerHTML = "Salvar conteúdos";
     saveButton.style.padding = "1rem"
 
     section = document.querySelector(".div_input");
@@ -15,13 +15,14 @@ document = addEventListener("DOMContentLoaded", function(evento){
                 hora = document.getElementById("hora").value,
                 local = document.getElementById("local").value
 
-                localStorage.setItem("descricao", JSON.stringify(descricao));
-                localStorage.setItem("data", JSON.stringify(data));
-                localStorage.setItem("hora", JSON.stringify(hora));
-                localStorage.setItem("local", JSON.stringify(local));
+                localStorage.setItem("descricao", `${descricao}`);
+                localStorage.setItem("data", `${data}`);
+                localStorage.setItem("hora", `${hora}`);
+                localStorage.setItem("local", `${local}`);
+
+                localStorage.setItem ("clickou_parce", "True")
                 
-                alert("Evento salvo com sucesso!");
+                alert("Conteúdo salvo com sucesso!");
     });
-
+ 
 })
-
