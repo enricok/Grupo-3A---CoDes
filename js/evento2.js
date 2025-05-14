@@ -24,6 +24,37 @@ document.addEventListener("DOMContentLoaded", function(evento){
                 
                 alert("Conteúdo salvo com sucesso!");
     });
+
+    setadireitalink = document.querySelector('a[href = "eventos_select3.html"]');
+    if (setadireitalink) {
+        setadireitalink.addEventListener("click", function(event) {
+            descricao = document.getElementById("descricao").value;
+            data = document.getElementById("data").value;
+            hora = document.getElementById("hora").value;
+            local = document.getElementById("local").value;
+
+            if (descricao === "") {
+                alert("Preencha o campo de Descrição.");
+                event.preventDefault();
+            }
+
+            if (data === "") {
+                alert("Preencha o campo de Data.");
+                event.preventDefault();
+            }
+
+            if (hora === "") {
+                alert("Preencha o campo de Hora.");
+                event.preventDefault();
+            }
+
+            if (local === "") {
+                alert("Preencha o campo de Local.");
+                event.preventDefault();
+            }
+        });
+    }
+
+});
  
-})
 
