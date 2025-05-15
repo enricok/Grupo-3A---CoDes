@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(evento) {
         calendarContainer.style.display = 'flex';
         calendarContainer.style.flexDirection = 'column';
         calendarContainer.style.gap = '0.25rem';
-        calendarContainer.style.width = '20rem';
+        calendarContainer.style.width = '30rem';
         calendarContainer.style.boxSizing = 'border-box';
         calendarContainer.style.fontSize = '0.7rem';
 
