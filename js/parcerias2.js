@@ -47,5 +47,34 @@ document.addEventListener("DOMContentLoaded", function(evento){
         });
     }
 
+    inputData = document.getElementById("data");
+    inputData.addEventListener("input", function(evento) {
+        valor = evento.target.value;
+        valor = valor.replace(/\D/g, ""); 
+        dia = valor.slice(0, 2);
+        mes = valor.slice(2, 4);
+        ano = valor.slice(4, 8);
+    
+        if (dia.length === 2 && (dia[0] > "3" || (dia[0] === "3" && dia[1] > "1"))) {
+            dia = "31";
+        }
+    
+        if (mes.length === 2 && (mes[0] > "1" || (mes[0] === "1" && mes[1] > "2"))) {
+            mes = "12";
+        }
+    
+        valorFormatado = dia;
+        if (mes.length > 0) {
+            valorFormatado += "/" + mes;
+        }
+        if (ano.length > 0) {
+            valorFormatado += "/" + ano;
+        }
+    
+        evento.target.value = valorFormatado;
+    });
+
+
 });
+
  
