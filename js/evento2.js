@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function(evento){
                 alert("Conteúdo salvo com sucesso!");
     });
 
+<<<<<<< HEAD
     inputData = document.getElementById("data");
     inputData.addEventListener("input", function(evento) {
         valor = evento.target.value;
@@ -68,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function(evento){
     });
 
     setadireitalink = document.querySelector('a[href="eventos_select3.html"]');
+=======
+    setadireitalink = document.querySelector('a[href = "eventos_select3.html"]');
+>>>>>>> 0435119893e40d4cf5dd74538f3398fd8b536ee1
     if (setadireitalink) {
         setadireitalink.addEventListener("click", function(event) {
             descricao = document.getElementById("descricao").value;
@@ -86,12 +90,20 @@ document.addEventListener("DOMContentLoaded", function(evento){
             }
 
             if (hora === "") {
+<<<<<<< HEAD
                 alert("Preencha o campo da Hora.");
+=======
+                alert("Preencha o campo de Hora.");
+>>>>>>> 0435119893e40d4cf5dd74538f3398fd8b536ee1
                 event.preventDefault();
             }
 
             if (local === "") {
+<<<<<<< HEAD
                 alert("Preencha o campo do Local.");
+=======
+                alert("Preencha o campo de Local.");
+>>>>>>> 0435119893e40d4cf5dd74538f3398fd8b536ee1
                 event.preventDefault();
             }
         });
