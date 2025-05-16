@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(evento){ 
 
-    section = document.querySelector (".div")
+    section = document.querySelector (".div");
 
-    botao = section.querySelector("button")
+    botao = section.querySelector("button");
 
     botao.addEventListener ("click", function (evento) {
-        alert ("Confirmado!")
+        alert ("Confirmado!");
     })
 
-    p_descricao = document.querySelector (".descricao")
-    p_data = document.querySelector (".data")
-    p_horario = document.querySelector (".horario")
-    p_local = document.querySelector (".local")
+    p_descricao = document.querySelector (".descricao");
+    p_data = document.querySelector (".data");
+    p_horario = document.querySelector (".horario");
+    p_local = document.querySelector (".local");
 
-    descricao = localStorage.getItem('descricao')
-    data = localStorage.getItem('data')
-    horario = localStorage.getItem('hora')
-    local = localStorage.getItem('local')
+    descricao = localStorage.getItem('descricao');
+    data = localStorage.getItem('data');
+    horario = localStorage.getItem('hora');
+    local = localStorage.getItem('local');
 
-    p_descricao.innerHTML = `Descrição: ${descricao}`
-    p_data.innerHTML = `Data do evento: ${data}`
-    p_horario.innerHTML = `Horário agendado: ${horario}`
-    p_local.innerHTML = `Local: ${local}`
+    p_descricao.innerHTML = `Descrição: ${descricao}`;
+    p_data.innerHTML = `Data do evento: ${data}`;
+    p_horario.innerHTML = `Horário agendado: ${horario}`;
+    p_local.innerHTML = `Local: ${local}`;
 
 })

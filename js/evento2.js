@@ -52,9 +52,6 @@ document.addEventListener("DOMContentLoaded", function(evento){
         evento.target.value = valorFormatado;
     });
 
-
-
-
     inputDuracao = document.getElementById("hora");
 
     inputDuracao.addEventListener("input", function(evento) {

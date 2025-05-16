@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function(evento) {
                 }
                 dayCell.addEventListener('click', function(e) {
                     alert('Data selecionada: ' + e.target.innerHTML + '/' + (month + 1) + '/' + year);
-                    localStorage.setItem("data", `${e.target.innerHTML}/${month + 1}/${year}`)
+                    localStorage.setItem("data", `${e.target.innerHTML}/${month + 1}/${year}`);
                 });
                 dayCell.addEventListener('mouseover', function(e) {
                     if (!(e.target.innerHTML == today.getDate() && month === today.getMonth() && year === today.getFullYear())) {
