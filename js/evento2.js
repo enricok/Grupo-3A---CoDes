@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(evento){
                 localStorage.setItem("hora", `${hora}`);
                 localStorage.setItem("local", `${local}`);
 
-                localStorage.setItem ("clickou_evento", "True")
+                localStorage.setItem ("clickou_evento", "True");
                 
                 alert("Conteúdo salvo com sucesso!");
     });
