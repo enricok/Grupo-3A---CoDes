@@ -59,7 +59,7 @@ body{
 }
 
 .meta-text{
-    font-size: 1.3vh;
+    font-size: 1.4vh;
 }
 
 .change {
@@ -109,6 +109,10 @@ h2 {
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.activity {
+    font-size: 200%;
 }
 
 iframe {
