@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Load saved profile picture
     const savedFoto = localStorage.getItem("perfil_foto");
     
     dia = localStorage.getItem("data");
@@ -9,6 +8,42 @@ document.addEventListener("DOMContentLoaded", function () {
     lizinho.innerHTML = `Lombar: ${dia}`;
     lizinho.style.fontSize = "1.3vh";
     ul.appendChild(lizinho);
+
+    img_load = document.querySelector('img[src="img/load.png"]');
+    if (img_load) {
+        container = document.createElement("div");
+        container.id = "progressContainer";
+        container.style.position = "relative";
+        container.style.width = "100%";
+        container.style.height = "2rem";
+        container.style.backgroundColor = "#e0e0e0";
+        container.style.borderRadius = "0.5rem";
+        container.style.margin = "0 auto";
+        container.style.marginBottom = "1rem";
+
+        bar = document.createElement("div");
+        bar.id = "progressBar";
+        bar.style.position = "absolute";
+        bar.style.height = "100%";
+        bar.style.backgroundColor = "#D96C9F";
+        bar.style.borderRadius = "0.5rem";
+        bar.style.width = "0%";
+        bar.style.transition = "width 0.3s ease-in-out";
+
+        container.appendChild(bar);
+
+        img_load.parentNode.replaceChild(container, img_load);
+
+        let progress = 0;
+        const interval = setInterval(() => {
+            if (progress < 100) {
+                progress += 1;
+                bar.style.width = `${progress}%`;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50);
+    }
 
     gear = document.querySelector('footer nav a img[src*="gear.png"]');
 
@@ -172,4 +207,5 @@ document.addEventListener("DOMContentLoaded", function () {
         ta_aberto = !ta_aberto;
         sidebar.style.left = ta_aberto ? "0" : "-250px";
     });
+
 });
