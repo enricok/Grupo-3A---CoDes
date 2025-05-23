@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const savedFoto = localStorage.getItem("perfil_foto");
+    savedFoto = localStorage.getItem("perfil_foto");
     
     dia = localStorage.getItem("data");
     ul = document.querySelector("ul");
@@ -34,15 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         img_load.parentNode.replaceChild(container, img_load);
 
-        let progress = 0;
-        const interval = setInterval(() => {
-            if (progress < 100) {
-                progress += 1;
-                bar.style.width = `${progress}%`;
-            } else {
-                clearInterval(interval);
-            }
-        }, 50);
+        progress = 0
+
+        count = localStorage.getItem ('clickou')
+
+        progress += count
+        
+        bar.style.width = `${progress}%`
     }
 
     gear = document.querySelector('footer nav a img[src*="gear.png"]');
@@ -168,12 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.appendChild(popupContent);
             document.body.appendChild(popup);
 
-            // Show popup when clicking "Perfil"
             navItem1.addEventListener("click", function () {
                 document.getElementById("perfilPopup").style.display = "flex";
             });
 
-            // Popup buttons
             document.addEventListener("click", function (evento) {
                 if (evento.target.id === "fecharPopup") {
                     document.getElementById("perfilPopup").style.display = "none";

@@ -4,8 +4,13 @@ document.addEventListener("DOMContentLoaded", function(evento){
 
     botao = section.querySelector("button");
 
+    count = 0
+
     botao.addEventListener ("click", function (evento) {
         alert ("Confirmado!");
+        let count = parseInt(localStorage.getItem("clickou"));
+        count += 5
+        localStorage.setItem("clickou", `${count}`);
     })
 
     p_descricao = document.querySelector (".descricao");
