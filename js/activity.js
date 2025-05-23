@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    count = 0
-
     savedFoto = localStorage.getItem("perfil_foto");
     
     dia = localStorage.getItem("data");
